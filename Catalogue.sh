@@ -70,7 +70,7 @@ VALIDATE $? "Unzipping the package into the app directory"
 npm install &>> $LOGFILE
 VALIDATE $? "Installing the Node JS dependencies"
 
-cp /home/centos/Roboshop-Shell/Catalogue.service /etc/systemd/system/catalogue.service &>> $LOGFILE
+cp /home/centos/Roboshop-Shell-tf/Catalogue.service /etc/systemd/system/catalogue.service &>> $LOGFILE
 VALIDATE $? "Configuring the service file"
 
 systemctl daemon-reload &>> $LOGFILE
@@ -82,7 +82,7 @@ VALIDATE $? "Enabling the Service"
 systemctl start catalogue &>> $LOGFILE
 VALIDATE $? "Starting the Service"
 
-cp /home/centos/Roboshop-Shell/mongo.repo  /etc/yum.repos.d/mongo.repo &>> $LOGFILE
+cp /home/centos/Roboshop-Shell-tf/mongo.repo  /etc/yum.repos.d/mongo.repo &>> $LOGFILE
 VALIDATE $? "Creating the mongo repo file for MONGODB client"
 
 yum install mongodb-org-shell -y &>> $LOGFILE
