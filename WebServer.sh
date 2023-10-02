@@ -53,7 +53,7 @@ VALIDATE $? "Moving to the HTML directory"
 unzip /tmp/frontend.zip &>> $LOGFILE
 VALIDATE $? "Extracting the WEB zip file"
 
-cp /home/centos/Roboshop-Shell/Roboshop.conf /etc/nginx/default.d/roboshop.conf &>> $LOGFILE
+cp /home/centos/Roboshop-Shell-Tf/Roboshop.conf /etc/nginx/default.d/roboshop.conf &>> $LOGFILE
 VALIDATE $? "configuring the roboshop config file and using Reverse proxy configuration"
 
 systemctl restart nginx &>> $LOGFILE
