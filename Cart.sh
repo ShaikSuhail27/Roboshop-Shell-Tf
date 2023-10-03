@@ -70,7 +70,7 @@ VALIDATE $? "Unzipping the package into the app directory"
 npm install &>> $LOGFILE
 VALIDATE $? "Installing the Node JS dependencies"
 
-cp /home/centos/Roboshop-Shell/Cart.service /etc/systemd/system/cart.service &>> $LOGFILE
+cp /home/centos/Roboshop-Shell-Tf/Cart.service /etc/systemd/system/cart.service &>> $LOGFILE
 VALIDATE $? "Configuring the service file"
 
 systemctl daemon-reload &>> $LOGFILE
