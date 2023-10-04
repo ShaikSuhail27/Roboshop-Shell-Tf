@@ -35,7 +35,7 @@ fi
 yum module disable mysql -y  &>> $LOGFILE
 VALIDATE $? "Disabling the module for installing another version"
 
-cp /home/centos//Roboshop-Shell/Mysql.repo /etc/yum.repos.d/mysql.repo &>> $LOGFILE
+cp /home/centos//Roboshop-Shell-Tf/Mysql.repo /etc/yum.repos.d/mysql.repo &>> $LOGFILE
 VALIDATE $? "Configuring the My sql repo file"
 
 yum install mysql-community-server -y &>> $LOGFILE

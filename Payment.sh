@@ -67,7 +67,7 @@ VALIDATE $? "Unzipping the package into the app directory"
 pip3.6 install -r requirements.txt &>> $LOGFILE
 VALIDATE $? "Installing the Python dependencies"
 
-cp /home/centos/Roboshop-Shell/Payment.service /etc/systemd/system/payment.service &>> $LOGFILE
+cp /home/centos/Roboshop-Shell-Tf/Payment.service /etc/systemd/system/payment.service &>> $LOGFILE
 VALIDATE $? "Configuring the service file"
 
 systemctl daemon-reload &>> $LOGFILE
